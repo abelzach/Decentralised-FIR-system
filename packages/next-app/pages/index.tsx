@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,8 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>
         Decentralized FIR System
         </h1>
+        <br/>
+        <Link href="/fir">FIR REGISTERATION PORTAL</Link>
 
         <div
           style={{
@@ -25,7 +28,7 @@ const Home: NextPage = () => {
             justifyContent: "center"
           }}
         >
-          {/* <ConnectButton /> */}
+          <ConnectButton />
         </div>
 
         <div className={styles.grid}>
