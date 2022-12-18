@@ -28,7 +28,7 @@ const Home: NextPage = () => {
             justifyContent: "center"
           }}
         >
-          <ConnectButton />
+          <ConnectButton accountStatus="avatar" label="Sign in"/>
         </div>
 
         <div className={styles.grid}>
