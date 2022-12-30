@@ -55,7 +55,7 @@ const Home: NextPage = () => {
         </h1>
         <br/>
         <Link href="/fir">FIR REGISTERATION PORTAL</Link>
-
+        <Link href="/evidence">Evidence Storage</Link>
         <div
           style={{
             height: "10vh",
