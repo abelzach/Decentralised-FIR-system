@@ -4,10 +4,18 @@ import styles from '../styles/Home.module.css';
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Link from 'next/link'
 import { ethers } from "ethers";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+// import Cookies from "js-cookie";
+import { useRouter } from "next/router";
+import { NextResponse } from "next/server";
+import { getCookie, setCookie } from 'typescript-cookie'
+
+// npm i --save-dev @types/js-cookie
 
 const Home: NextPage = () => {
 
+  
+  const router = useRouter();
   const [walletAddress,setWalletAddress] = useState("");
 
   async function requestAccount() {
@@ -20,7 +28,20 @@ const Home: NextPage = () => {
           method: "eth_requestAccounts",
         });
         console.log(accounts);
-        setWalletAddress(accounts[0]);
+        setWalletAddress(accounts[0])
+
+        console.log("Hi");
+        console.log(typeof(accounts[0]))
+        console.log(accounts[0])
+        if(accounts[0] == '0x52bB3A42564c0Df72ECB111D24BE82C614497A22'.toLowerCase())
+        {
+          console.log("congrats");
+          setCookie("loggedin", "true");
+          // console.log(req.cookies.get("loggedin"));
+          // router.push("/fir");
+          console.log(getCookie("loggedin"))
+          
+        }
       }
       catch(error) {
         console.log("Error connecting");
@@ -29,6 +50,8 @@ const Home: NextPage = () => {
     else {
       alert("Please install metamask");
     }
+
+    // 0x52bB3A42564c0Df72ECB111D24BE82C614497A22
   }
 
   async function connectWallet() {
