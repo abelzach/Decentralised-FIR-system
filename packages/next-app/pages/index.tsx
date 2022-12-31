@@ -57,15 +57,15 @@ const Home: NextPage = () => {
     // 0x52bB3A42564c0Df72ECB111D24BE82C614497A22
   }
 
-  async function connectWallet() {
-    if(typeof window.ethereum !== 'undefined')
-    {
-      await requestAccount();
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      await provider.send("eth_requestAccounts", []);
+  // async function connectWallet() {
+  //   if(typeof window.ethereum !== 'undefined')
+  //   {
+  //     await requestAccount();
+  //     const provider = new ethers.providers.Web3Provider(window.ethereum);
+  //     await provider.send("eth_requestAccounts", []);
 
-    }
-  }
+  //   }
+  // }
 
   return (
     <>
