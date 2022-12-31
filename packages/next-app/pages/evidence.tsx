@@ -22,7 +22,7 @@ export default function Evidence() {
                 </div>
                 <div className="flex justify-center">
                     <div className="mb-3 w-96">
-                        <label className="form-label inline-block mb-2 text-gray-700">Default file input example</label>
+                        <label className="form-label inline-block mb-2 text-gray-700">Upload file</label>
                         <input className="form-control
                         block
                         w-full
