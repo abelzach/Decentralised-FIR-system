@@ -42,6 +42,8 @@ const Home: NextPage = () => {
   }
 
   return (
+    <>
+    <div className="h-27 bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100">   
     <div className={styles.container}>
       <Head>
         <title>Decentralized FIR System</title>
@@ -81,7 +83,8 @@ const Home: NextPage = () => {
         <p>Decentralized FIR system - Main project</p>
       </footer>
     </div>
-  )
-}
+    </div>
+    </>
+)}
 
-export default Home
+export default Home;

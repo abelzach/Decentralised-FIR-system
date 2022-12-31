@@ -4,10 +4,15 @@ import Link from 'next/link';
 export default function evidenceCards() {
     return (
         <>
+        <div className="h-27 bg-gradient-to-r from-rose-100 to-teal-100">
         <center>
             <h1>Evidences </h1>
+            <h3>
+                <Link href="/">Back to home</Link>
+            </h3>
         </center>
-        <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+
+        <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5" >
             <div className="w-full rounded-lg shadow-md lg:max-w-sm">
             <img
                 className="object-cover w-full h-48"
@@ -112,7 +117,7 @@ export default function evidenceCards() {
                 </button>
             </div>
         </div>
-        
+
         </div>
 
         <style jsx>{`
@@ -129,6 +134,7 @@ export default function evidenceCards() {
                 color: #0070f3;
             }
         `}</style>
+        </div>
         </>
     )
 

@@ -4,6 +4,7 @@ import Link from 'next/link';
 export default function Evidence() {
     return (
         <>
+        <div className="h-27 bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-fuchsia-300 via-green-400 to-rose-700">
         <center>
             <h1>Evidence </h1>
             
@@ -17,7 +18,7 @@ export default function Evidence() {
                     <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
                         CASE ID
                     </label>
-                    <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="nick" type="text"/>
+                    <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="caseId" type="text"/>
                     </div>
                 </div>
                 <div className="flex justify-center">
@@ -45,7 +46,7 @@ export default function Evidence() {
                     <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                         Evidence Description
                     </label>
-                    <textarea className=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message"></textarea>
+                    <textarea className=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="evidenceDesc"></textarea>
                     </div>
                 </div>
                 <div className="md:flex md:items-center">
@@ -57,7 +58,7 @@ export default function Evidence() {
                     <div className="md:w-2/3"></div>
                 </div>
                 </form>
-
+            <br/><br/><br/>
         </center>
             <style jsx>{`
             h1{
@@ -73,7 +74,7 @@ export default function Evidence() {
                 color: #0070f3;
             }
         `}</style>
-
+        </div>
         </>
     )
 

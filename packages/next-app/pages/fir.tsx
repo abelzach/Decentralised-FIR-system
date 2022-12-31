@@ -4,6 +4,7 @@ import Link from 'next/link';
 export default function FIR() {
     return (
         <>
+        <div className="h-27 bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-yellow-200 via-emerald-200 to-yellow-200">
         <center>
             <h1>FIR Registration</h1>
             
@@ -17,7 +18,7 @@ export default function FIR() {
                     <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
                         CASE ID
                     </label>
-                    <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="nick" type="text"/>
+                    <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="ID" type="text"/>
                     </div>
                 </div>
                 <div className="flex flex-wrap -mx-3 mb-6">
@@ -25,7 +26,7 @@ export default function FIR() {
                     <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
                         IPC SECTIONS
                     </label>
-                    <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email"/>
+                    <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="ipc" type="text"/>
                     </div>
                 </div>
                 <div className="flex flex-wrap -mx-3 mb-6">
@@ -33,7 +34,7 @@ export default function FIR() {
                     <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                         FIR Description
                     </label>
-                    <textarea className=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message"></textarea>
+                    <textarea className=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="Desc"></textarea>
                     </div>
                 </div>
                 <div className="md:flex md:items-center">
@@ -45,7 +46,7 @@ export default function FIR() {
                     <div className="md:w-2/3"></div>
                 </div>
                 </form>
-
+        <br/><br/><br/>
         </center>
             <style jsx>{`
             h1{
@@ -61,7 +62,7 @@ export default function FIR() {
                 color: #0070f3;
             }
         `}</style>
-
+        </div>
         </>
     )
 
