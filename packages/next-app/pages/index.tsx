@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 // import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import { NextResponse } from "next/server";
-import { getCookie, setCookie } from 'typescript-cookie'
+import { getCookie, setCookie, removeCookie } from 'typescript-cookie'
 
 // npm i --save-dev @types/js-cookie
 
@@ -30,17 +30,20 @@ const Home: NextPage = () => {
         console.log(accounts);
         setWalletAddress(accounts[0])
 
-        console.log("Hi");
-        console.log(typeof(accounts[0]))
-        console.log(accounts[0])
-        if(accounts[0] == '0x52bB3A42564c0Df72ECB111D24BE82C614497A22'.toLowerCase())
+        if(accounts[0] == '0x6855cc76b0f1f87a92f204346647adb557b28860'.toLowerCase())
         {
           console.log("congrats");
-          setCookie("loggedin", "true");
+          var inTenMinutes = new Date(new Date().getTime() + 10 * 60 * 1000);
+
+          setCookie("loggedin", "true",{ expires: inTenMinutes });
           // console.log(req.cookies.get("loggedin"));
           // router.push("/fir");
           console.log(getCookie("loggedin"))
           
+        }
+        else{
+          console.log("sorry.. wrong address");
+          removeCookie('loggedin')
         }
       }
       catch(error) {

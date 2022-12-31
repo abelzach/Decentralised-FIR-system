@@ -3,8 +3,6 @@ import type { NextRequest } from 'next/server'
 
 export function middleware(request: NextRequest) {
 
-  
-
 
     console.log("responsee" + request.cookies.has('loggedin'))
 
