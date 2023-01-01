@@ -1,8 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import { ConnectButton } from "@rainbow-me/rainbowkit";
-import Link from 'next/link'
+import { Heading, Button, StatGroup, Stat, StatLabel, StatNumber, StatHelpText, StatArrow} from '@chakra-ui/react'
 import { ethers } from "ethers";
 import { useEffect, useState } from 'react';
 // import Cookies from "js-cookie";
@@ -43,6 +42,7 @@ const Home: NextPage = () => {
         }
         else{
           console.log("sorry.. wrong address");
+          
           removeCookie('loggedin')
         }
       }
@@ -69,47 +69,77 @@ const Home: NextPage = () => {
 
   return (
     <>
-    <div className="h-27 bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100">   
-    <div className={styles.container}>
-      <Head>
-        <title>Decentralized FIR System</title>
-        <meta name="description" content="Our main project" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-        Decentralized FIR System
-        </h1>
-        <br/>
-        <Link href="/fir">FIR REGISTERATION PORTAL</Link>
-        <Link href="/evidence">Evidence Storage</Link>
-        <Link href="/evidenceCards">Evidence Cards</Link>
-        <div
-          style={{
-            height: "10vh",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center"
-          }}
-        >
-        <button onClick={requestAccount} className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+    <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-4">
+      <div className="flex items-center flex-shrink-0 text-white mr-10">
+        <span className="font-bold text-xl tracking-tight">DeFIR</span>
+      </div>
+      <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div className="text-sm lg:flex-grow">
+          <a href="/fir" className="block mt-4 lg:inline-block lg:mt-0 text-teal-50 hover:text-white mr-10">
+            FIR Registeration Portal
+          </a>
+          <a href="/evidence" className="block mt-4 lg:inline-block lg:mt-0 text-teal-50 hover:text-white mr-10">
+            Evidence Storage
+          </a>
+          <a href="/firCards" className="block mt-4 lg:inline-block lg:mt-0 text-teal-50 hover:text-white  mr-10">
+            FIR
+          </a>
+          <a href="/evidenceCards" className="block mt-4 lg:inline-block lg:mt-0 text-teal-50 hover:text-white  mr-10">
+            Evidences
+          </a>
+        </div>
+        <Button onClick={requestAccount} size='lg' colorScheme='blue' mt='6px'>
           Connect
-        </button>
+        </Button>
+      </div>
+    </nav>
+
+    <div className="h-27 bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100">   
+    
+    <center>
+    <StatGroup>
+      <Stat>
+        <StatLabel>FIRs REGISTERED</StatLabel>
+        <StatNumber>345,670</StatNumber>
+        <StatHelpText>
+          <StatArrow type='increase' />
+          23.36%
+        </StatHelpText>
+      </Stat>
+
+      <Stat>
+        <StatLabel>Evidences Stored</StatLabel>
+        <StatNumber>45</StatNumber>
+        <StatHelpText>
+          <StatArrow type='decrease' />
+          9.05%
+        </StatHelpText>
+      </Stat>
+    </StatGroup>
+    </center>
+
+    
+      <main className={styles.main}>
+
+      <Heading size='lg' fontSize='50px'>
+        Decentralized FIR 
+      </Heading>
+        <br/>
         
+        {/* <Link href="/fir">FIR REGISTERATION PORTAL</Link> */}
+        {/* <Link href="/evidence">Evidence Storage</Link> */}
+        {/* <Link href="/evidenceCards">Evidence Cards</Link> */}
         
-        </div>
-        <h3>Address : {walletAddress}</h3>
-        <div className={styles.grid}>
-            <h2>So guys this can be the main page from where we can direct to the other pages</h2>
-        </div>
+        <Heading noOfLines={1}>
+          Address : {walletAddress}
+        </Heading>
       </main>
 
       <footer className={styles.footer}>
         <p>Decentralized FIR system - Main project</p>
       </footer>
     </div>
-    </div>
+    
     </>
 )}
 
