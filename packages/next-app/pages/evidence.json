@@ -1,0 +1,52 @@
+[
+{ 
+    "fir-no" : 1,
+    "dor" : "12/12/21",
+    "police-station" : "mundakayam",
+    "name-complainant" : "abel",
+    "name-accused" : "abel",
+    "applicant-detail" : [{
+        "name" : "",
+        "parentage" : "",
+        "address" : "",
+        "contact-no": 7568619257,
+        "relationship-with-accused" : ""
+    }]
+},
+
+
+{   
+    "fir-no" : 2,
+    "dor" : "12/12/21",
+    "police-station" : "mundakayam",
+    "name-complainant" : "abel",
+    "name-accused" : "abel",
+    "applicant-detail" : [{
+        "name" : "",
+        "parentage" : "",
+        "address" : "",
+        "contact-no": 7568619257,
+        "relationship-with-accused" : ""
+    }]
+}
+
+,
+
+
+{   
+    "fir-no" : 3,
+    "dor" : "12/12/21",
+    "police-station" : "mundakayam",
+    "name-complainant" : "abel",
+    "name-accused" : "abel",
+    "applicant-detail" : [{
+        "name" : "",
+        "parentage" : "",
+        "address" : "",
+        "contact-no": 7568619257,
+        "relationship-with-accused" : ""
+    }]
+}
+
+
+]
