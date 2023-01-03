@@ -74,23 +74,23 @@ const Home: NextPage = () => {
   // }
 
   return (
-    <>
-    <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-4">
-      <div className="flex items-center flex-shrink-0 text-white mr-10">
-        <span className="font-bold text-xl tracking-tight">DeFIR</span>
+    <div className='px-2 font-inter'>
+    {/* <nav classNameName="flex items-center justify-between flex-wrap bg-teal-500 p-4">
+      <div classNameName="flex items-center flex-shrink-0 text-white mr-10">
+        <span classNameName="font-bold text-xl tracking-tight">DeFIR</span>
       </div>
-      <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-        <div className="text-sm lg:flex-grow">
-          <a href="/fir" className="block mt-4 lg:inline-block lg:mt-0 text-teal-50 hover:text-white mr-10">
+      <div classNameName="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div classNameName="text-sm lg:flex-grow">
+          <a href="/fir" classNameName="block mt-4 lg:inline-block lg:mt-0 text-teal-50 hover:text-white mr-10">
             FIR Registeration Portal
           </a>
-          <a href="/evidence" className="block mt-4 lg:inline-block lg:mt-0 text-teal-50 hover:text-white mr-10">
+          <a href="/evidence" classNameName="block mt-4 lg:inline-block lg:mt-0 text-teal-50 hover:text-white mr-10">
             Evidence Storage
           </a>
-          <a href="/firCards" className="block mt-4 lg:inline-block lg:mt-0 text-teal-50 hover:text-white  mr-10">
+          <a href="/firCards" classNameName="block mt-4 lg:inline-block lg:mt-0 text-teal-50 hover:text-white  mr-10">
             FIR
           </a>
-          <a href="/evidenceCards" className="block mt-4 lg:inline-block lg:mt-0 text-teal-50 hover:text-white  mr-10">
+          <a href="/evidenceCards" classNameName="block mt-4 lg:inline-block lg:mt-0 text-teal-50 hover:text-white  mr-10">
             Evidences
           </a>
         </div>
@@ -100,7 +100,7 @@ const Home: NextPage = () => {
       </div>
     </nav>
 
-    <div className="h-27 bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100">   
+    <div classNameName="h-27 bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100">   
     
     <center>
     <StatGroup>
@@ -125,28 +125,100 @@ const Home: NextPage = () => {
     </center>
 
     
-      <main className={styles.main}>
+      <main classNameName={styles.main}>
 
       <Heading size='lg' fontSize='50px'>
         Decentralized FIR 
       </Heading>
-        <br/>
+        <br/> */}
         
         {/* <Link href="/fir">FIR REGISTERATION PORTAL</Link> */}
         {/* <Link href="/evidence">Evidence Storage</Link> */}
         {/* <Link href="/evidenceCards">Evidence Cards</Link> */}
         
-        <Heading noOfLines={1}>
+        {/* <Heading noOfLines={1}>
           Address : {walletAddress}
         </Heading>
       </main>
 
-      <footer className={styles.footer}>
+      <footer classNameName={styles.footer}>
         <p>Decentralized FIR system - Main project</p>
       </footer>
-    </div>
+    </div> */}
     
-    </>
+<nav className="sm:px-4 py-2.5 opacity-100">
+  <div className="container flex px-16 flex-wrap items-center justify-between mx-auto">
+    <a href="/" className="flex items-center">
+        <span className="self-center text-xl font-bold whitespace-nowrap dark:text-black">DFIR</span>
+    </a>
+    <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+      <ul className="flex flex-row">
+      <li className='mt-2'>
+      <a href="/fir" className="mx-5 my-5">
+            FIR Registeration Portal
+      </a>
+      </li>
+      <li className='mt-2'>
+          <a href="/evidence" className="mx-5 my-5">
+                Evidence storage
+          </a>
+          </li>
+          <li className='mt-2'>
+          <a href="/firCards" className="mx-5 my-5">
+                FIR
+          </a>
+          </li>
+          <li className='mt-2'>
+          <a href="/evidenceCards" className="mx-5 my-5">
+                Evidences
+          </a>
+          </li>
+        <li>
+          <button onClick={requestAccount} className="block py-2 pl-3 pr-4 text-black border-2 border-black">Connect wallet</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div className='flex flex-wrap h-screen flex-row justify-between'>
+  <div className=' w-7/12'>
+    <div className='flex flex-col px-20 gap-6'>
+    <h1 className='text-7xl font-bold mt-16 leading-tight'>
+    Bulletproof crime management system
+    </h1>
+    <p className='text-2xl text-slate-600'>
+    Keep track of FIRs, evidences and crimes securely with the power of blockchain technology
+    </p>
+    <button className='bg-gradient-to-br from-teal-200 via-teal-400 to-teal-800 w-48 h-12 mt-4 text-slate-100 font-medium'>
+      Book a call with us
+    </button>
+    <div className='border-t-2 border-black mt-14 p-8 flex flex-row justify-evenly'>
+    <div className='flex flex-col content-center'>
+      <p className='text-5xl font-bold text-black'>
+        35,587
+      </p>
+      <p className='mt-2 text-xl font-medium'>
+        FIRs registers
+      </p>
+      </div>
+      <div className='flex flex-col content-center'>
+      <p className='text-5xl font-bold'>
+        1015
+      </p>
+      <p className='mt-2 text-xl font-medium'>
+        Evidences stored
+      </p>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div className='w-5/12 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900'>
+    {/* <h1>
+    Bulletproof crime management system
+    </h1> */}
+  </div>
+</div>
+</div>
 )}
 
 export default Home;
