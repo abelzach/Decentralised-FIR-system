@@ -29,7 +29,10 @@ const Home: NextPage = () => {
         console.log(accounts);
         setWalletAddress(accounts[0])
 
-        if(accounts[0] == '0x6855cc76b0f1f87a92f204346647adb557b28860'.toLowerCase() || accounts[0] == '0x52bB3A42564c0Df72ECB111D24BE82C614497A22'.toLowerCase())
+
+
+        // 0x1d1eFC63bf932c1daF23c01FD1e18dD1bBe1E78a
+        if(accounts[0] == '0x6855cc76b0f1f87a92f204346647adb557b28860'.toLowerCase() || accounts[0] == '0x52bB3A42564c0Df72ECB111D24BE82C614497A22'.toLowerCase() || accounts[0] == '0x1d1efc63bf932c1daf23c01fd1e18dd1bbe1e78a'.toLowerCase())
         {
           console.log("congrats");
           var inTenMinutes = new Date(new Date().getTime() + 10 * 60 * 1000);
