@@ -1,18 +1,13 @@
 export default function FIR() {
-    return (
-        
+    return (     
     <div className='font-inter'>    
-    <nav className="sm:px-4 py-2.5 opacity-100">
-      <div className="container flex px-16 flex-wrap items-center justify-between mx-auto">
-        <a href="/" className="flex items-center">
-            <span className="self-center text-xl font-bold whitespace-nowrap dark:text-black">DFIR</span>
-        </a>
-      </div>
-    </nav>
     <div className='flex flex-wrap h-screen flex-row justify-between'>
       <div className=' w-2/12 bg-[#131313]'>
+        <p className="font-bold text-white text-xl ml-10 mt-5">
+            DFIR
+        </p>
         <div className='flex flex-col items-center'>
-            <h1 className='mt-24 text-2xl font-extralight text-gray-100'>
+            <h1 className='mt-48 text-2xl font-extralight text-gray-100'>
                 Filed by
             </h1>
             <p className='mt-4 text-base font-normal text-gray-200'>
@@ -21,7 +16,7 @@ export default function FIR() {
         </div>
       </div>
       <div className='w-10/12'>
-        <div className='ml-10'>
+        <div className='ml-10 mt-14'>
                 <a href="/">
                 <div className='flex flex-row gap-2'>
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"></path>
