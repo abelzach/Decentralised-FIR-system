@@ -26,12 +26,17 @@ console.log(Evi);
 export default function evidenceCards() {
     return (
         <>
-        <div className="h-27 bg-gradient-to-r from-rose-100 to-teal-100">
+        <div>
+        <nav className="sm:px-4 py-2.5 opacity-100">
+        <div className="container flex px-16 flex-wrap items-center justify-between mx-auto">
+            <a href="/" className="flex items-center">
+                <span className="self-center text-xl font-bold whitespace-nowrap dark:text-black">DFIR</span>
+            </a>
+        </div>
+        </nav>
         <center>
             <h1>Evidences </h1>
-            <h3>
-                <Link href="/">Back to home</Link>
-            </h3>
+            
         </center>
 
         
@@ -40,7 +45,7 @@ export default function evidenceCards() {
 
         {Evi.map(evi => <Card> 
                             <CardHeader>
-                                <Heading size='md'>FIR {evi.fir_no}</Heading>
+                                <Heading size='md'>Evidence {evi.fir_no}</Heading>
                             </CardHeader>
 
                             <Stack divider={<StackDivider />} spacing='4'>
