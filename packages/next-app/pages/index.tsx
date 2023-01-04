@@ -159,6 +159,11 @@ const Home: NextPage = () => {
       </a>
       </li>
       <li className='mt-2'>
+      <a href="/dashboard" className="mx-5 my-5">
+            Dashboard
+      </a>
+      </li>
+      <li className='mt-2'>
           <a href="/evidence" className="mx-5 my-5">
                 Evidence storage
           </a>
